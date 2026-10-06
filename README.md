@@ -7,12 +7,16 @@ for new versions.
 **Do not clone this repo for development** — it contains only CI-published
 artifacts. For source code, see the repos below.
 
+**Latest:** [v1.0.69](https://github.com/aamirali51/meshdrop-releases/releases/latest)
+(desktop + Android).
+
 ## Ecosystem
 
 | Repository | Visibility | Contents |
 |------------|-----------|----------|
-| [meshdrop-app](https://github.com/aamirali51/meshdrop-app) | Private | Desktop + mobile clients |
-| [meshdrop-core](https://github.com/aamirali51/meshdrop-core) | Public | P2P engine — `@mesh/core` |
+| [meshdrop-app](https://github.com/aamirali51/meshdrop-app) | Public | Desktop + mobile clients |
+| [meshdrop-core](https://github.com/aamirali51/meshdrop-core) | Public | P2P engine — `@meshdrop-go/core` |
+| [meshdrop-host](https://github.com/aamirali51/meshdrop-host) | Public | Headless host + `mesh` CLI — `@meshdrop-go/host` |
 | **meshdrop-releases** (this repo) | Public | Release artifacts for the auto-updater |
 
 ## What's here
@@ -25,6 +29,7 @@ contains the following artifacts for the latest version:
 | `MeshDrop-Setup-<ver>.exe` | Windows | NSIS installer |
 | `MeshDrop-<ver>-portable.exe` | Windows | Single-file portable executable |
 | `MeshDrop-<ver>-mac-arm64.dmg` | macOS | Apple Silicon disk image |
+| `MeshDrop-<ver>-mac-x64.dmg` | macOS | Intel disk image |
 | `MeshDrop-<ver>-linux-x86_64.AppImage` | Linux | Portable Linux binary |
 | `MeshDrop-<ver>.apk` | Android | React Native release APK |
 | `latest.yml` | Windows | Electron-updater manifest |
@@ -48,3 +53,7 @@ contains the following artifacts for the latest version:
 Artifacts are published automatically by the
 [meshdrop-app CI workflow](https://github.com/aamirali51/meshdrop-app/actions)
 when a `v*` tag is pushed. Do not upload artifacts manually.
+
+The `mesh` CLI / headless host is released separately to npm and GitHub
+Container Registry from the
+[meshdrop-host](https://github.com/aamirali51/meshdrop-host) repo.
